@@ -4,6 +4,13 @@
     ConnectionType: 'AzureRM'
     azureSubscription: 'Free Trial(ef455335-e5fb-44b2-bce7-c64f2abfbb7f)'
     appType: 'webApp'
+    WebAppName: 'deploydotnet'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(ef455335-e5fb-44b2-bce7-c64f2abfbb7f)'
+    appType: 'webApp'
     WebAppName: 'deployazweb'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Build and test ASP.NET Core projects targeting the full .NET Framework.
